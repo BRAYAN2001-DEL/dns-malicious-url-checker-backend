@@ -1,0 +1,13 @@
+# Usa la imagen oficial de MySQL
+FROM mysql:latest
+
+# Define la variable de entorno para la contraseña de root de MySQL
+ENV MYSQL_ROOT_PASSWORD=admin
+
+# Define la base de datos y el usuario
+ENV MYSQL_DATABASE=dns
+ENV MYSQL_USER=root
+ENV MYSQL_PASSWORD=admin
+
+# Expone el puerto 3306 para que se pueda acceder a MySQL desde fuera del contenedor
+EXPOSE 3306
