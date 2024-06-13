@@ -10,8 +10,10 @@ COPY dns_inventory.py /app/dns_inventory.py
 COPY url_analysis.py /app/url_analysis.py
 COPY requirements.txt /app/requirements.txt
 
-# Instala las dependencias del proyecto
-RUN pip install --no-cache-dir -r requirements.txt
+
+# Instala las dependencias necesarias, incluyendo mysql-connector-python
+RUN pip install --no-cache-dir -r requirements.txt \
+    && pip install mysql-connector-python
 
 # Expone el puerto en el que corre la aplicación Flask
 EXPOSE 5000
