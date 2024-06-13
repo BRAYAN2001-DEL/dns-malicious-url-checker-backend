@@ -2,3 +2,4 @@ flask
 flask-cors
 requests
 dnspython
+Werkzeug==2.2.2
