@@ -13,3 +13,4 @@ def get_url_analysis(url):
         return response.json()
     else:
         return {}
+
